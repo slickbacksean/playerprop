@@ -1,0 +1,25 @@
+# config/settings/development.yml
+application:
+  environment: "development"
+  debug: true
+
+database:
+  host: "localhost"
+  port: 5432
+  name: "sports_prop_predictor_dev"
+  username: "dev_user"
+
+api:
+  odds_providers:
+    - name: "sportradar"
+      enabled: true
+    - name: "odds_api"
+      enabled: false
+
+feature_flags:
+  model_retraining: true
+  data_collection: true
+  experimental_features: true
+
+logging:
+  level: "DEBUG"

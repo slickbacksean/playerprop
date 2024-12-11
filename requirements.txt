@@ -1,0 +1,70 @@
+# Core ML Libraries
+scikit-learn
+xgboost
+tensorflow
+numpy
+pandas
+
+# Data Processing
+scipy
+pyarrow
+
+# Web Framework
+fastapi
+uvicorn
+
+# Authentication
+python-jose
+passlib
+bcrypt
+
+# Database
+sqlalchemy
+alembic
+psycopg2-binary
+
+# Logging
+structlog
+
+# Utilities
+pydantic
+python-dotenv
+
+
+# Testing
+pytest
+pytest-cov
+pytest-asyncio
+httpx  # for testing FastAPI endpoints
+
+# API Documentation
+python-multipart  # for handling form data
+email-validator  # for pydantic email validation
+
+# Development Tools
+black  # code formatting
+isort  # import sorting
+flake8  # linting
+mypy   # type checking
+
+# Monitoring & Performance
+prometheus-client
+opentelemetry-api
+opentelemetry-sdk
+
+# Security
+python-multipart  # for form handling
+python-jose[cryptography]  # upgrade existing python-jose with cryptography
+requests
+
+# Data Validation & Serialization
+marshmallow
+pyyaml
+ujson  # faster JSON processing
+
+# Date/Time Handling
+pytz
+python-dateutil
+
+# Caching (if needed)
+redis

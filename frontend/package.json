@@ -1,0 +1,19 @@
+{
+  "name": "propMasterAI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@radix-ui/react-tooltip": "^1.1.4",
+    "class-variance-authority": "^0.7.1",
+    "lucide-react": "^0.462.0",
+    "radix-ui": "^1.0.1",
+    "recharts": "^2.13.3"
+  },
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
+  }
+}

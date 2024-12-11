@@ -1,0 +1,61 @@
+# Data Preprocessing and Transformation Configuration
+
+global_settings:
+  missing_value_strategy: 'median_imputation'
+  outlier_handling: 'winsorization'
+  normalization_method: 'z_score'
+
+numeric_columns:
+  player_score:
+    transformations:
+      - name: 'clip'
+        min_value: 0
+        max_value: 50
+      - name: 'log_transform'
+        apply_when: 'skewed'
+    preprocessing:
+      - missing_value_method: 'median'
+      - scaling: 'standardize'
+
+categorical_columns:
+  team:
+    encoding:
+      method: 'one_hot'
+      max_categories: 20
+    preprocessing:
+      - lowercase: true
+      - remove_special_chars: true
+
+time_series_features:
+  rolling_windows:
+    - column: 'player_score'
+      windows: [3, 5, 10]
+      aggregations: ['mean', 'std', 'max']
+  
+  lag_features:
+    - column: 'player_score'
+      lags: [1, 2, 3]
+
+feature_engineering:
+  derived_features:
+    - name: 'player_efficiency'
+      formula: 'player_score / game_minutes'
+      conditions:
+        game_minutes: 
+          min_value: 10
+
+validation_rules:
+  numeric_constraints:
+    player_score:
+      min: 0
+      max: 50
+      required: true
+    
+  categorical_constraints:
+    team:
+      allowed_values: ['Lakers', 'Bulls', 'Warriors']
+      case_sensitive: false
+
+data_quality_checks:
+  missing_value_threshold: 0.1
+  unique_value_ratio_threshold: 0.95

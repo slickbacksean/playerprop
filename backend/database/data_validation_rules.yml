@@ -1,0 +1,91 @@
+# Comprehensive Data Validation Rules
+
+users:
+  username:
+    type: string
+    min_length: 3
+    max_length: 50
+    pattern: '^[a-zA-Z0-9_]+$'
+    unique: true
+
+  email:
+    type: string
+    format: email
+    unique: true
+
+  role:
+    type: enum
+    values: 
+      - admin
+      - regular
+      - premium
+
+predictions:
+  sport:
+    type: string
+    allowed_values:
+      - basketball
+      - football
+      - baseball
+      - soccer
+      - hockey
+
+  prop_type:
+    type: string
+    max_length: 50
+    pattern: '^[a-z_]+$'
+
+  predicted_value:
+    type: float
+    min: 0
+    max: 1000
+    precision: 2
+
+  odds:
+    type: float
+    min: -10000
+    max: 10000
+    precision: 2
+
+  status:
+    type: enum
+    values:
+      - pending
+      - correct
+      - incorrect
+      - cancelled
+
+odds:
+  sport:
+    type: string
+    allowed_values:
+      - basketball
+      - football
+      - baseball
+      - soccer
+      - hockey
+
+  odds_type:
+    type: enum
+    values:
+      - moneyline
+      - spread
+      - prop
+      - total
+
+  value:
+    type: float
+    min: -10000
+    max: 10000
+    precision: 2
+
+  implied_probability:
+    type: float
+    min: 0
+    max: 1
+    precision: 4
+
+global_constraints:
+  max_predictions_per_user_per_day: 50
+  max_concurrent_active_predictions: 10
+  prediction_window_hours: 24

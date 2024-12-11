@@ -1,0 +1,58 @@
+# Environments
+venv/
+env/
+.env
+.venv
+env.bak/
+venv.bak/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Machine Learning artifacts
+*.model
+*.pkl
+*.joblib
+
+# Logs
+logs/
+*.log
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Secret files
+secrets/
+*.key
+
+# Database files
+*.sqlite3
+*.db
+
+# Model-specific temporary files
+ml_pipeline/tmp/
+ml_pipeline/cache/
+
+# Dependency directories
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage

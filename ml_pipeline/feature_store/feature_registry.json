@@ -1,0 +1,56 @@
+{
+    "player_performance": {
+        "features": [
+            {
+                "name": "player_score",
+                "description": "Total points scored by a player in a game",
+                "data_type": "float",
+                "source": "game_statistics",
+                "transformation": "rolling_mean"
+            },
+            {
+                "name": "player_efficiency_rating",
+                "description": "Comprehensive player performance metric",
+                "data_type": "float",
+                "source": "advanced_statistics",
+                "transformation": "normalized_score"
+            }
+        ]
+    },
+    "team_performance": {
+        "features": [
+            {
+                "name": "team_win_rate",
+                "description": "Percentage of games won by a team",
+                "data_type": "float",
+                "source": "team_history",
+                "transformation": "cumulative_average"
+            },
+            {
+                "name": "home_away_performance_diff",
+                "description": "Performance difference between home and away games",
+                "data_type": "float",
+                "source": "game_locations",
+                "transformation": "differential"
+            }
+        ]
+    },
+    "betting_features": {
+        "features": [
+            {
+                "name": "implied_probability",
+                "description": "Betting odds converted to probability",
+                "data_type": "float",
+                "source": "betting_odds",
+                "transformation": "odds_to_probability"
+            },
+            {
+                "name": "market_volatility",
+                "description": "Variation in betting lines",
+                "data_type": "float",
+                "source": "betting_market",
+                "transformation": "standard_deviation"
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+# config/settings/base.yml
+application:
+  name: "Sports Prop Predictor"
+  version: "0.1.0"
+  environment: "base"
+  debug: false
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+database:
+  pool_size: 10
+  connection_timeout: 30
+
+api:
+  timeout: 10
+  retry_attempts: 3
+
+feature_flags:
+  default_enabled: false
+
+monitoring:
+  enabled: false

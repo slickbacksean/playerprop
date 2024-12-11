@@ -1,0 +1,36 @@
+# Testing
+pytest
+pytest-cov
+pytest-mock
+hypothesis
+
+# Code Quality
+pylint
+mypy
+black
+isort
+flake8
+
+# Documentation
+sphinx
+myst-parser
+
+# Debugging
+ipython
+pudb
+
+# Performance Profiling
+memory-profiler
+py-spy
+
+# Type Checking
+types-requests
+types-python-dateutil
+
+# Security Scanning
+bandit
+safety
+
+# Dev Requirements
+pyyaml
+python-dotenv

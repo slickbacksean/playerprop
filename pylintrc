@@ -1,0 +1,72 @@
+[MASTER]
+# Add project root to Python path
+init-hook='import sys; sys.path.append(".")'
+
+# Use multiple processes to speed up Pylint
+jobs=4
+
+# Allow loading modules and packages from top-level directories
+ignore-paths=^(./tests|./ml_pipeline)$
+
+[MESSAGES CONTROL]
+# Enable specific warnings
+enable=
+    F,  # Fatal errors
+    E,  # Errors
+    W,  # Warnings
+    R,  # Refactoring recommendations
+    C,  # Convention recommendations
+
+# Disable specific warnings
+disable=
+    C0111,  # missing-docstring
+    C0103,  # invalid-name
+    W0311,  # bad-indentation
+    R0903,  # too-few-public-methods
+    R0913,  # too-many-arguments
+
+[REPORTS]
+# Set output format
+output-format=text
+reports=yes
+evaluation=10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)
+
+[LOGGING]
+# Logging format configuration
+logging-modules=logging
+
+[MISCELLANEOUS]
+# Notes for code review
+notes=FIXME,XXX,TODO
+
+[SIMILARITIES]
+# Minimum lines to detect code duplication
+min-similarity-lines=4
+ignore-comments=yes
+ignore-docstrings=yes
+ignore-imports=no
+
+[TYPECHECK]
+# Handle type checking for ML libraries
+ignored-classes=
+    numpy,
+    pandas,
+    tensorflow,
+    sklearn,
+    xgboost
+
+[FORMAT]
+# Maximum line length
+max-line-length=88
+
+[DESIGN]
+# Maximum number of arguments for function/method
+max-args=8
+max-locals=20
+max-returns=8
+max-branches=15
+max-statements=50
+max-parents=7
+max-attributes=10
+min-public-methods=1
+max-public-methods=20

@@ -1,0 +1,45 @@
+{
+    "users": {
+        "primary_key": "id",
+        "relationships": {
+            "predictions": {
+                "type": "one_to_many",
+                "foreign_key": "user_id",
+                "cascade": ["save-update", "merge", "delete"]
+            }
+        }
+    },
+    "predictions": {
+        "primary_key": "id",
+        "relationships": {
+            "user": {
+                "type": "many_to_one",
+                "foreign_key": "user_id",
+                "cascade": ["save-update", "merge"]
+            }
+        }
+    },
+    "odds": {
+        "primary_key": "id",
+        "relationships": {}
+    },
+    "data_integrity_constraints": {
+        "users": {
+            "unique_constraints": [
+                "username",
+                "email"
+            ],
+            "check_constraints": [
+                "role IN ('admin', 'regular', 'premium')"
+            ]
+        },
+        "predictions": {
+            "foreign_key_constraints": [
+                "user_id references users(id)"
+            ],
+            "check_constraints": [
+                "status IN ('pending', 'correct', 'incorrect', 'cancelled')"
+            ]
+        }
+    }
+}

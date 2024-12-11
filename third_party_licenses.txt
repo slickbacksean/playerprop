@@ -1,0 +1,43 @@
+# Third-Party Licenses
+
+## Open Source Libraries and Frameworks
+
+### Python Libraries
+- **NumPy**: [BSD 3-Clause License](https://numpy.org/license.html)
+- **Pandas**: [BSD 3-Clause License](https://github.com/pandas-dev/pandas/blob/master/LICENSE)
+- **Scikit-learn**: [BSD 3-Clause License](https://github.com/scikit-learn/scikit-learn/blob/main/COPYING)
+- **TensorFlow**: [Apache License 2.0](https://github.com/tensorflow/tensorflow/blob/master/LICENSE)
+- **XGBoost**: [Apache License 2.0](https://github.com/dmlc/xgboost/blob/master/LICENSE)
+- **Cryptography**: [Apache License 2.0 / BSD License](https://cryptography.io/en/latest/license/)
+
+### Web Frameworks
+- **Flask**: [BSD License](https://flask.palletsprojects.com/en/2.0.x/license/)
+- **FastAPI**: [MIT License](https://github.com/tiangolo/fastapi/blob/master/LICENSE)
+
+### Authentication & Security
+- **JWT**: [MIT License](https://github.com/jpadilla/pyjwt/blob/master/LICENSE)
+- **OAuth2**: [MIT License](https://github.com/oauthlib/oauthlib/blob/master/LICENSE)
+
+## Compliance Notes
+1. All third-party libraries are vetted for security and compatibility
+2. Compliance with each library's licensing terms is mandatory
+3. Attribution requirements are met in project documentation
+
+## License Compliance Process
+- Regular audits of third-party dependencies
+- Tracking of license changes
+- Ensuring no conflicting license requirements
+- Documenting all incorporated open-source software
+
+## Commercial Use Considerations
+- Some libraries may have restrictions on commercial use
+- Consult legal team before integrating new dependencies
+- Maintain detailed records of license terms
+
+## Attribution Requirements
+Please refer to individual library documentation for specific attribution requirements.
+
+## License Updates
+This document is updated quarterly to reflect current dependencies and their licensing status.
+
+*Last Updated: [Current Date]*
